@@ -113,7 +113,7 @@ std::istream& operator >>(std::istream& cin, String& obj)
 	obj = buffer;
 	return cin;
 }
-std::istream& getine(std::istream& cin, String& obj)
+std::istream& getline(std::istream& cin, String& obj)
 {
 	cin.getline(obj.get_str(), obj.get_size());
 	return cin;
