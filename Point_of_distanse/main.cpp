@@ -56,10 +56,11 @@ double distanse(double x_1, double y_1, double x_2, double y_2);
 
 		  //вызываем функцию distanse
 		  double rast = distanse(point_1.get_x(), point_1.get_y(), point_2.get_x(), point_2.get_y());
+		  //double rast = distanse(point_1.distanse(point_1.get_x(), point_1.get_y()), point_2.distanse(point_2.get_x(), point_2.get_y()));
 		  cout <<"Растояние между двумя точками: "<< rast;
 	  }
-
-	  double distanse(double x_1, double y_1, double x_2, double y_2) {
+ 
+	   double distanse(double x_1, double y_1, double x_2, double y_2) {
 		  double dist = sqrt(pow(x_1 - x_2, 2) + pow(y_1 - y_2, 2));
 		  return dist;
 	  }
