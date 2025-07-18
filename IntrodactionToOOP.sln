@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "My_String", "My_String\My_S
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "My_Fraction", "My_Fraction\My_Fraction.vcxproj", "{983CD375-77D0-47EC-AF52-CAD16C2E38C1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FanctionCHECK", "FanctionCHECK\FanctionCHECK.vcxproj", "{18D14DCE-6372-478A-84E3-57B9CE42662F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{983CD375-77D0-47EC-AF52-CAD16C2E38C1}.Release|x64.Build.0 = Release|x64
 		{983CD375-77D0-47EC-AF52-CAD16C2E38C1}.Release|x86.ActiveCfg = Release|Win32
 		{983CD375-77D0-47EC-AF52-CAD16C2E38C1}.Release|x86.Build.0 = Release|Win32
+		{18D14DCE-6372-478A-84E3-57B9CE42662F}.Debug|x64.ActiveCfg = Debug|x64
+		{18D14DCE-6372-478A-84E3-57B9CE42662F}.Debug|x64.Build.0 = Debug|x64
+		{18D14DCE-6372-478A-84E3-57B9CE42662F}.Debug|x86.ActiveCfg = Debug|Win32
+		{18D14DCE-6372-478A-84E3-57B9CE42662F}.Debug|x86.Build.0 = Debug|Win32
+		{18D14DCE-6372-478A-84E3-57B9CE42662F}.Release|x64.ActiveCfg = Release|x64
+		{18D14DCE-6372-478A-84E3-57B9CE42662F}.Release|x64.Build.0 = Release|x64
+		{18D14DCE-6372-478A-84E3-57B9CE42662F}.Release|x86.ActiveCfg = Release|Win32
+		{18D14DCE-6372-478A-84E3-57B9CE42662F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

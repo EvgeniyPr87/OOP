@@ -181,7 +181,7 @@ Fraction operator /(const Fraction& left, const Fraction& right) {
 	return left * right.inverted();
 }
 
-Fraction operator+(Fraction& left, Fraction& right) {
+Fraction operator +( Fraction& left, Fraction& right) {
 	left.to_improper();
 	right.to_improper();
 	return
@@ -189,7 +189,7 @@ Fraction operator+(Fraction& left, Fraction& right) {
 			left.get_denominator() * right.get_denominator()).reduce().to_proper();
 }
 
-Fraction operator-(Fraction& left, Fraction& right) {
+Fraction operator -(Fraction& left, Fraction& right) {
 	left.to_improper();
 	right.to_improper();
 	return
