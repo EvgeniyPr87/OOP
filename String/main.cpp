@@ -49,6 +49,14 @@ public:
 		cout << "CopyConstructor:\t" << this << endl;
 
 	}
+	String(String&& other)
+	{
+		this->size = other.size;
+		this->str = other.str;
+		other.size = 0;
+		other.str = nullptr;//защищаем память ще удаления деструктором
+		cout << "MoveConstructor:\t" << this << endl;
+	}
 	~String()
 	{
 		delete[]str;
@@ -68,6 +76,17 @@ public:
 		cout << "CopyAssigment:\t" << this << endl;
 		return *this;
 	}
+	String& operator =(String&& other)
+	{
+		if (this == &other)return *this;
+		delete[]this->str;
+		this->size = other.size;
+		this->str = other.str;
+		other.size = 0;
+		other.str = nullptr;
+		cout << "MoveAssignment:\t\t" << this << endl;
+		return *this;
+	 }
 
 	char operator[](int i)const
 	{
@@ -118,8 +137,10 @@ std::istream& getline(std::istream& cin, String& obj)
 	cin.getline(obj.get_str(), obj.get_size());
 	return cin;
 }
+#define  delimiter "\n----------------------------------"
 //#define CONSTRUCTORS_CHECK
-//#define OPERATOR_PLUS
+#define OPERATOR_PLUS
+//#define ISTRIM_OPERATOR
 
 void main() {
 	setlocale(LC_ALL, "");
@@ -144,14 +165,19 @@ void main() {
 
 	String str1 = "Hello";
 	String str2 = "World";
-	String str3 = str1 + " " + str2;
+	cout << delimiter << endl;
+	String str3 = str1  + str2;
+	cout << delimiter << endl;
 	cout << str3 << endl;
 #endif // OPERATOR_PLUS
 
+#ifdef ISTRIM_OPERATOR
 	String str;
 	cout << "Введите строку: "; //cin >> str;
 
 	getline(cin, str);
 	SetConsoleCP(866);
 	cout << str << endl;
+#endif // ISTRIM_OPERATOR
+
 }
